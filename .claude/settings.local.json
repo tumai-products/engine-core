@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -d /c/Users/fedor/repos/tumai-hq/skills/*/ 2>/dev/null | grep -v '^\\\\.' | while read d; do basename \"$d\"; done | sort)",
+      "Bash(for repo:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/fedor/repos/tumai-hq/$repo/**)",
+      "Read(//c/Users/fedor/repos/tumai-programmes/$repo/**)",
+      "Bash(python /c/Users/fedor/repos/tumai-hq/skills/sync-workspace/sync-workspace-tool.py status)",
+      "Bash(python /c/Users/fedor/repos/tumai-hq/skills/sync-workspace/sync-workspace-tool.py sync -m \"docs: refresh settings — update skill counts to 65\")"
+    ]
+  }
+}

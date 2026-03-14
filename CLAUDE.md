@@ -44,7 +44,7 @@ The engine is composed of modules:
 
 | Resource | Location |
 |----------|----------|
-| Skills (66) | `../../tumai-hq/skills/` — [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (68) | `../../tumai-hq/skills/` — [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/.mindatlas/config/` |
 | Planning docs | `../../tumai-hq/it-hub/engine-core/` |
@@ -83,7 +83,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | **Google** | gmail, gcalendar, gdocs, gsheets, gdrive-sync, youtube, youtube-notes |
 | **Atlassian** | atlassian-goals, atlassian-projects, confluence-sync, confluence-scan, confluence-summarise, confluence-publisher, confluence-manager, confluence-pull |
 | **Utilities** | diagram-generator, email-send, export-images, skill-creator, task-creator, sync-workspace, sync-repos, refresh-settings, integrate-repo |
-| **Development** | webapp-creator, website-deploy, frontend-design |
+| **Development** | webapp-creator, website-deploy, frontend-design, figma-design, figma-to-code |
 | **System** | check-integrations, enrich-twin, submission-reset |
 
 ## Conventions
@@ -103,7 +103,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | HEAD — Research, orchestration |
-| `skills` | Shared AI skills (66) |
+| `skills` | Shared AI skills (68) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |

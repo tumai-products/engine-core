@@ -44,7 +44,7 @@ The engine is composed of modules:
 
 | Resource | Location |
 |----------|----------|
-| Skills (68) | `../../tumai-hq/skills/` — [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (100) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/.mindatlas/config/` |
 | Planning docs | `../../tumai-hq/it-hub/engine-core/` |
@@ -103,7 +103,7 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | Repository | Purpose |
 |------------|---------|
 | `mind-atlas` | HEAD — Research, orchestration |
-| `skills` | Shared AI skills (68) |
+| `skills` | Shared AI skills (100) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |

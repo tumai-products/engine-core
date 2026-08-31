@@ -1,3 +1,5 @@
+*Last updated: 2026-08-31 22:47 (UK)*
+
 # CLAUDE.md — Engine Core
 
 Primary instructions and context for Claude when working in this repository.
@@ -44,7 +46,7 @@ The engine is composed of modules:
 
 | Resource | Location |
 |----------|----------|
-| Skills (115) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
+| Skills (119) | `../../tumai-hq/skills/` - [tumai-hq/skills](https://github.com/tumai-hq/skills) |
 | API Credentials | `~/.mindatlas/credentials/.env` (local only) |
 | Shared Config | `~/.mindatlas/config/` |
 | Planning docs | `../../tumai-hq/it-hub/engine-core/` |
@@ -111,8 +113,8 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 
 | Repository | Purpose |
 |------------|---------|
-| `mind-atlas` | HEAD — Research, orchestration |
-| `skills` | Shared AI skills (115) |
+| `mind-atlas` | HEAD, research, MIND Jira planning home |
+| `skills` | Shared AI skills (119) |
 | `business-hub` | Business operations |
 | `family-hub` | Personal/family life management |
 | `beauty-hub` | Kseniia's beauty business |
@@ -120,27 +122,69 @@ Skills are loaded from `../../tumai-hq/skills/` ([tumai-hq/skills](https://githu
 | `learning-hub` | Education and training |
 | `it-hub` | IT infrastructure and operations |
 | `sql-hub` | Central SQL workspace |
+| `cloud-services` | Managed cloud services inventory |
+| `integrations-hub` | Vendor layer - per-vendor docs, vault contracts, smoke tests, tested adapters; cut-off register (Jira: INTEG) |
 
 ### Product Tier (tumai-products)
 
 | Repository | Purpose |
 |------------|---------|
-| `engine-core` | This repo — Reusable portal foundation (Go + Vue/DevExtreme) |
+| `engine-core` | **This repo** - Reusable portal foundation (Go + Vue/DevExtreme) |
 | `node-agent` | Infrastructure monitoring agent (Go + Vue) |
 | `my-first-app` | Sandbox web app (Vue + Go) |
+| `buildsmart` | Product (Jira: BSMART) - CityFibre FTTH DepoNet dataset custody + viewer |
+| `file-sync` | Product (Jira: FSYNC) |
+| `finance-portal` | Product |
+| `mail-atlas` | Product |
+| `media-capture` | Product |
+| `media-forge` | Product (Jira: MFORGE) |
+| `web-capture` | Product (Jira: WCAP) |
+| `screen-capture` | Product (Jira: SCAP) |
+| `codex` | Product (Jira: CODEX) |
+| `work-atlas` | Product (Jira: WATLAS) |
+| `buildsmart-portal` | Buildsmart portal - DepoNet dataset custody, S3-to-UNAS transfer, viewer (Jira: BSMART) |
 
 ### Programme Tier (tumai-programmes)
 
 | Repository | Purpose |
 |------------|---------|
+| `kseniia` | Kseniia Brow Art programme |
+| `kseniia-website` | Renewed kseniia.co.uk (Nuxt + Tailwind, replacing Tilda) |
+| `kseniia-website-design` | Kseniia website design assets |
+| `kseniia-academy` | Kseniia Academy programme (strategy + content) |
+| `kseniia-academy-webapp` | Academy webapp (Nuxt + Go) |
+| `kseniia-academy-webapp-design` | Academy webapp design assets |
+| `kseniia-portal-api` | Kseniia portal API |
+| `kseniia-portal-web` | Kseniia portal web frontend |
+| `kseniia-portal-design` | Kseniia portal design assets |
+| `kseniia-client-web` | Kseniia client-facing web app (lightweight, no DevExtreme) |
 | `limitless` | Limitless programme |
 | `limitless-portal` | Limitless portal webapp |
 | `limitless-portal-design` | Limitless portal design assets |
 | `limitless-website` | Limitless public website (Nuxt SSG) |
-| `kseniia` | Kseniia Brow Art programme |
-| `kseniia-website` | Renewed kseniia.co.uk (Nuxt + Tailwind) |
-| `kseniia-academy` | Kseniia Academy programme |
-| `kseniia-academy-webapp` | Academy webapp (Nuxt + Go) |
+| `stationroadclinic-co-uk` | Station Road Clinic programme |
+| `stationroadclinic-co-uk-portal` | Clinic patient portal |
+| `stationroadclinic-co-uk-website` | Clinic public website |
+| `vasilyev-co-uk-website` | vasilyev.co.uk website |
+| `tumai-co-uk` | tumai.co.uk website (Tumai Management Ltd corporate site - Tilda to Nuxt migration, Jira: TUMUK) |
+| `tumaifibre` | Tumai Fibre programme + tumaifibre.co.uk website (single-repo monorepo, Jira: TFIBRE) |
+| `ftth-acquisition-dd-framework` | Tumai Fibre Scope of Work framework (vendor-neutral, mined from CF/Cheetah portfolio; TFIBRE workstream) |
+| `cf-condor-migration` | CityFibre Condor FTTH migration |
+| `cf-migration-genoa` | CityFibre Genoa FTTH pre-migration DD |
+| `cf-migration-falcon` | CityFibre Falcon FTTH pre-migration DD |
+| `cf-migration-osprey` | CityFibre Osprey FTTH pre-migration DD |
+| `cf-migration-cougar` | CityFibre Cougar FTTH migration |
+| `cf-migration-engine` | CityFibre MigrationEngine programme |
+| `cf-migration-reference` | Shared CityFibre migration reference assets |
+| `cf-migration-template` | CityFibre migration project template |
+| `cf-comarch-reference` | CityFibre Comarch reference assets |
+| `cf-me-performance-testing-strategy` | CityFibre MigrationEngine performance testing strategy (Tumai deliverable) |
+| `cf-me-test` | ME-TEST online testsuite-driver service for the CityFibre IME migration engine pipeline |
+| `cf-test-wrapper` | TEST-WRAPPER testsuite-driver running CityFibre migration jobs through Purplecube (`-549` / `-deploy549` are version/deploy variants) |
+| `cf-ime-validation` | CF IME Validation (Hotspots) programme (Jira: CFIMEV) |
+| `ime-hotspots` | IME hotspots analysis |
+| `ime-mock` | IME mock service (OpenAPI codegen + HTTP server; `-mx480` is a variant) |
+| `depotnet` | Depotnet programme (Jira: BSMART) - legacy DepoNet/VST data rescue |
 
 ---
 
